@@ -1,32 +1,32 @@
 #Solution for
 
 1. Find out the number of days between two datetime parameters.
-##Usage
+*Usage*
 php artisan datetime:days datetime1 datetime2
 
 datetime1 and datetime2 should be of the format dd-mm-yyyy-hh-mm-ss
 
 There is no space between yyyy and hh in the format. Introducing a space between them will split date and time into two different parameters
 
-##Usage example
+*Usage example*
 php artisan datetime:days 01-01-2016-10-30-00 15-01-2016-11-00-00
 
 2. Find out the number of weekdays between two datetime parameters.
-##Usage
+*Usage*
 php artisan datetime:weekdays datetime1 datetime2
 
 datetime1 and datetime2 should be of the format dd-mm-yyyy-hh-mm-ss
 
-##Usage example
+*Usage example*
 php artisan datetime:weekdays 01-01-2016-10-30-00 15-01-2016-11-00-00
 
 3. Find out the number of complete weeks between two datetime parameters.
-##Usage
+*Usage*
 php artisan datetime:weeks datetime1 datetime2
 
 datetime1 and datetime2 should be of the format dd-mm-yyyy-hh-mm-ss
 
-##Usage example
+*Usage example*
 php artisan datetime:weeks 01-01-2016-10-30-00 15-01-2016-11-00-00
 
 4. Accept a third parameter to convert the result of (1, 2 or 3) into one of seconds, minutes, hours, years.
@@ -37,7 +37,7 @@ i convert the result in minutes
 h convert the result in hours
 y convert the result in years
 
-##Usage example
+*Usage example*
 php artisan datetime:days datetime1 datetime2 --output=s
 php artisan datetime:weekdays datetime1 datetime2 --output=i
 php artisan datetime:weeks datetime1 datetime2 --output=h
