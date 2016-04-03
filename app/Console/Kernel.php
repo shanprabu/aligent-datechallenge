@@ -18,6 +18,7 @@ class Kernel extends ConsoleKernel
         Commands\DateTimeWeeksCommand::class,
         Commands\DateTimeWeekDaysCommand::class,
         Commands\DateTimeTimezoneCommand::class,
+        Commands\DateTimeDstCommand::class,
     ];
 
     /**

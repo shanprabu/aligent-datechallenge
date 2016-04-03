@@ -63,5 +63,20 @@ timezone1 is for datetime1 and timezone2 is for datetime2
     php artisan datetime:tz 01-01-2016-00-00-00 01-01-2016-00-00-00 Australia/Adelaide Australia/Melbourne
     php artisan datetime:tz 01-01-2016-00-00-00 01-01-2016-12-30-30 Australia/Adelaide Australia/Melbourne
 
+6.Check for DST time difference in hours for a specific timezone. 
+
+**Usage**
+php artisan datetime:dst datetime1 datetime2 timezone
+
+datetime1 and datetime2 should be of the format dd-mm-yyyy-hh-mm-ss
+timezone can be any standard time-zone string. Please refer to http://php.net/manual/en/timezones.php for list of valid time-zone strings
+
+**Usage example**
+
+    php artisan datetime:dst 01-04-2016-00-00-00 04-04-2016-00-00-00 Australia/Melbourne
+    php artisan datetime:dst 01-03-2016-00-00-00 04-03-2016-00-00-00 Australia/Melbourne
+
+In the above examples, first command will return 73 hours and the second command will return 72 hours
+
 **Validate test cases by running phpunit from the command prompt**
 

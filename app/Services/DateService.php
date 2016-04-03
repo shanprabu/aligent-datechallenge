@@ -47,6 +47,25 @@ class DateService
     }
 
     /**
+     * Gives the DST difference in same TimeZone
+     *
+     * @param        $dateOne
+     * @param        $dateTwo
+     * @param string $timeZone
+     *
+     * @return string
+     */
+    public function diffOfDST($dateOne, $dateTwo, $timeZone = null)
+    {
+        $dateOne = $this->carbon->createFromFormat('d-m-Y-H-i-s', $dateOne, $timeZone);
+        $dateTwo = $this->carbon->createFromFormat('d-m-Y-H-i-s', $dateTwo, $timeZone);
+
+        $diffInDST = $dateOne->diffInHours($dateTwo);
+
+        return $diffInDST . ' hours';
+    }
+
+    /**
      * Gives the difference between 2 dates in weekdays
      *
      * @param        $dateOne
